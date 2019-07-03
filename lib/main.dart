@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_string/random_string.dart';
+import './ButtonWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Assignment 1'),
     );
   }
 }
@@ -28,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String _displayText = '';
 
   void _incrementCounter() {
     setState(() {
@@ -43,15 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(
-              onPressed: _randomizeText,
-              child: Text('Randomize Text'),
-            ),
-            Text(_displayText + ' ' + _counter.toString()),
-          ],
+        child: Center(
+          child: TextControl(_counter),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -60,11 +52,5 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
-
-  void _randomizeText() {
-    setState(() {
-      _displayText = randomAlpha(10);
-    });
   }
 }
