@@ -32,56 +32,27 @@ class MyApp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              Container(
-                margin: EdgeInsets.fromLTRB(50, 15, 50, 5),
-                padding: EdgeInsets.only(left: 10),
-                // color: Colors.white,
-                height: 30,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(4.0),
-                  ),
-                ),
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.call,
-                      color: Colors.teal,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text('+44 123 4567 8901'),
-                  ],
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                margin: EdgeInsets.fromLTRB(50, 5, 50, 5),
-                padding: EdgeInsets.only(left: 10),
-                // color: Colors.white,
-                height: 30,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(4.0),
-                  ),
+              Card(
+                elevation: 5,
+                margin: EdgeInsets.symmetric(horizontal: 50),
+                child: ListTile(
+                  leading: Icon(Icons.call),
+                  title: Text('+44 123 4567 8901'),
                 ),
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text('angela@gmail.com'),
-                  ],
+              ),
+              Card(
+                elevation: 5,
+                margin: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                child: ListTile(
+                  leading: Icon(Icons.email),
+                  title: Text('angela@gmail.com'),
                 ),
               ),
             ],
